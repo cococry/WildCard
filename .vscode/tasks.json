@@ -1,0 +1,59 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Engine Build",
+            "windows": {
+                "command": "${workspaceFolder}/engine/build.bat"
+            },
+            "linux": {
+                "command": "${workspaceFolder}/engine/build.sh"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/engine"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Debugger created this task."
+        },
+        {
+            "type": "shell",
+            "label": "Tests Build",
+            "windows": {
+                "command": "${workspaceFolder}/tests/build.bat"
+            },
+            "linux": {
+                "command": "${workspaceFolder}/tests/build.sh"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/tests"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+        },
+        {
+            "type": "shell",
+            "label": "Engine & Tests Build",
+            "windows": {
+                "command": "${workspaceFolder}/scripts/full-build.bat"
+            },
+            "linux": {
+                "command": "${workspaceFolder}/scripts/full-build.sh"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

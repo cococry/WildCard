@@ -1,0 +1,67 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/engine/src/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/glad/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/KHR/**",
+                "${workspaceFolder}/engine/vendor/GLFW/include/**",
+                "${workspaceFolder}/engine/vendor/stb_image/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "WLDC_EXPORT",
+                "_GNU_SOURCE"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/engine/src/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/glad/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/KHR/**",
+                "${workspaceFolder}/engine/vendor/GLFW/include/**",
+                "${workspaceFolder}/engine/vendor/stb_image/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "WLDC_EXPORT"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/engine/src/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/glad/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/KHR/**",
+                "${workspaceFolder}/engine/vendor/GLFW/include/**",
+                "${workspaceFolder}/engine/vendor/stb_image/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "WLDC_EXPORT"
+            ],
+            "windowsSdkVersion": "10.0.18362.0",
+            "compilerPath": "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
