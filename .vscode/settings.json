@@ -48,4 +48,9 @@
         "overviewRulerColor": "rgba(0,0,0,0)",
         "isWholeLine": false,
     },
+    "files.associations": {
+        "windowing.h": "c",
+        "wldc_def.h": "c",
+        "wldc_mem.h": "c"
+    },
 }

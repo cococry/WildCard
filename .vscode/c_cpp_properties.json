@@ -4,8 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/engine/src/**",
-                "${workspaceFolder}/engine/vendor/Glad/include/glad/**",
-                "${workspaceFolder}/engine/vendor/Glad/include/KHR/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/**",
                 "${workspaceFolder}/engine/vendor/GLFW/include/**",
                 "${workspaceFolder}/engine/vendor/stb_image/**"
             ],
@@ -25,8 +24,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/engine/src/**",
-                "${workspaceFolder}/engine/vendor/Glad/include/glad/**",
-                "${workspaceFolder}/engine/vendor/Glad/include/KHR/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/**",
                 "${workspaceFolder}/engine/vendor/GLFW/include/**",
                 "${workspaceFolder}/engine/vendor/stb_image/**"
             ],
@@ -45,8 +43,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/engine/src/**",
-                "${workspaceFolder}/engine/vendor/Glad/include/glad/**",
-                "${workspaceFolder}/engine/vendor/Glad/include/KHR/**",
+                "${workspaceFolder}/engine/vendor/Glad/include/**",
                 "${workspaceFolder}/engine/vendor/GLFW/include/**",
                 "${workspaceFolder}/engine/vendor/stb_image/**"
             ],
