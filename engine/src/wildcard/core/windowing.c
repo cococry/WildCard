@@ -1,7 +1,10 @@
 #include "windowing.h"
 
-#include "../internal/wldc_mem.h"
+#include "internal/wldc_mem.h"
 #include "asserts.h"
+
+#include "io/keyboard.h"
+#include "io/mouse.h"
 
 #include <glad/glad.h>
 
@@ -21,6 +24,14 @@ window_create(u32 width, u32 height, const char* title) {
     WLDC_ASSERT_MSG(window.glfw_instance, "Failed to create GLFW Window!");
 
     glfwMakeContextCurrent(window.glfw_instance);
+
+    glfwSetKeyCallback(window.glfw_instance, keyboard_callback);
+    glfwSetCursorPosCallback(window.glfw_instance, mouse_cursor_pos_callback);
+    glfwSetScrollCallback(window.glfw_instance, mouse_wheel_callback);
+    glfwSetMouseButtonCallback(window.glfw_instance, mouse_button_callback);
+
+    // TODO:
+    // glfwSetInputMode(window.glfw_instance, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     WLDC_ASSERT_MSG(gladLoadGLLoader((GLADloadproc)glfwGetProcAddress), "Failed to initialize Glad!");
 

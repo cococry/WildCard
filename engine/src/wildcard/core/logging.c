@@ -1,5 +1,5 @@
 #include "logging.h"
-#include "../internal/wldc_windows_log.h"
+#include "internal/wldc_windows_log.h"
 
 #include <stdio.h>
 #include <string.h>

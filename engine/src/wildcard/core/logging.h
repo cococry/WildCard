@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../internal/wldc_def.h"
+#include "internal/wldc_def.h"
 
 #define LOG_LEVEL_WARN 1
 #define LOG_LEVEL_INFO 1

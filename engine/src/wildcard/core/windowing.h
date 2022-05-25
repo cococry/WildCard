@@ -1,10 +1,8 @@
 #pragma once
 
-#include "../internal/wldc_def.h"
+#include "internal/wldc_def.h"
 
 #include <GLFW/glfw3.h>
-
-
 
 typedef struct wldc_window_props {
     i32 width, height;

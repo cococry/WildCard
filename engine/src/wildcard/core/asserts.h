@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../internal/wldc_def.h"
+#include "internal/wldc_def.h"
 
 #define HLOW_ASSERTS_ENABLED
 

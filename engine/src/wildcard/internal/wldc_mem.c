@@ -1,4 +1,4 @@
-#include "../core/logging.h"
+#include "core/logging.h"
 #include "wldc_mem.h"
 
 #include <stdio.h>

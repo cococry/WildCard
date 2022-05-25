@@ -51,6 +51,8 @@
     "files.associations": {
         "windowing.h": "c",
         "wldc_def.h": "c",
-        "wldc_mem.h": "c"
+        "wldc_mem.h": "c",
+        "string.h": "c",
+        "mouse.h": "c"
     },
 }
