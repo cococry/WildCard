@@ -27,6 +27,10 @@ void mouse_io_init() {
     s_state.buttons_changed = wldc_malloc(sizeof(bool8) * GLFW_KEY_LAST, mem_type_array);
 }
 
+void mouse_io_shudown() {
+    wldc_zero_mem(&s_state, sizeof(s_state));
+}
+
 void mouse_cursor_pos_callback(GLFWwindow* window, f64 xpos, f64 ypos) {
     s_state.x_pos = xpos;
     s_state.y_pos = ypos;

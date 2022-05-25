@@ -1,31 +1,18 @@
-#include <wildcard/core/windowing.h>
-#include <wildcard/core/logging.h>
-#include <wildcard/core/asserts.h>
-#include <wildcard/io/keyboard.h>
-#include <wildcard/io/mouse.h>
+#include <wildcard/core/application.h>
+
+#include "game.h"
 
 int main(void) {
-    windowing_init();
-    keyboard_io_init();
-    mouse_io_init();
+    application_props props;
 
-    wldc_window win = window_create(1920, 1080, "WildCard Tests");
+    props.width = 1280;
+    props.height = 720;
+    props.title = "WildCard Engine Testing";
 
-    while (window_is_open(&win)) {
-        if (is_key_released(GLFW_KEY_W)) {
-            WLDC_INFO("Released %s", "W!");
-        } else if (is_key_typed(GLFW_KEY_W)) {
-            WLDC_WARN("Typed %s", "W!");
-        }
-        if (is_mouse_button_pressed(GLFW_MOUSE_BUTTON_LEFT)) {
-            WLDC_ERROR("Typed %s", "left mouse!");
-        }
-        else if(is_moused_button_released(GLFW_MOUSE_BUTTON_LEFT)) {
-            WLDC_DEBUG("Released %s", "left mouse!");
-        }
+    props.app_init_pfn = game_init;
+    props.app_update_pfn = game_update;
+    props.app_shtdown_pfn = game_shutdown;
 
-        window_update(&win);
-    }
-
-    windowing_shutdown();
+    app_init(&props);
+    app_run();
 }

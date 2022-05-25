@@ -14,6 +14,10 @@ void keyboard_io_init() {
     s_state.keys = wldc_malloc(sizeof(bool8) * GLFW_KEY_LAST, mem_type_array);
     s_state.keys_changed = wldc_malloc(sizeof(bool8) * GLFW_KEY_LAST, mem_type_array);
 }
+
+void keyboard_io_shutdown() {
+    wldc_zero_mem(&s_state, sizeof(s_state));
+}
 void keyboard_callback(GLFWwindow* window, i32 key, i32 scancode, i32 action, i32 mods) {
     if (action != GLFW_RELEASE) {
         if (!s_state.keys[key]) {

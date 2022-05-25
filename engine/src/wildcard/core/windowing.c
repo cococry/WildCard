@@ -5,7 +5,7 @@
 
 #include "io/keyboard.h"
 #include "io/mouse.h"
-
+#include "logging.h"
 #include <glad/glad.h>
 
 void windowing_init() {
@@ -25,6 +25,8 @@ window_create(u32 width, u32 height, const char* title) {
 
     glfwMakeContextCurrent(window.glfw_instance);
 
+    WLDC_ASSERT_MSG(gladLoadGLLoader((GLADloadproc)glfwGetProcAddress), "Failed to intialize Glad!");
+
     glfwSetKeyCallback(window.glfw_instance, keyboard_callback);
     glfwSetCursorPosCallback(window.glfw_instance, mouse_cursor_pos_callback);
     glfwSetScrollCallback(window.glfw_instance, mouse_wheel_callback);
@@ -32,8 +34,6 @@ window_create(u32 width, u32 height, const char* title) {
 
     // TODO:
     // glfwSetInputMode(window.glfw_instance, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-
-    WLDC_ASSERT_MSG(gladLoadGLLoader((GLADloadproc)glfwGetProcAddress), "Failed to initialize Glad!");
 
     return window;
 }
@@ -47,9 +47,6 @@ void window_delete(wldc_window* window) {
 void window_update(wldc_window* window) {
     glfwSwapBuffers(window->glfw_instance);
     glfwPollEvents();
-
-    glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 }
 bool8 window_is_open(wldc_window* window) {
     return !glfwWindowShouldClose(window->glfw_instance);

@@ -6,6 +6,8 @@
 
 WLDC_API void mouse_io_init();
 
+WLDC_API void mouse_io_shudown();
+
 void mouse_cursor_pos_callback(GLFWwindow* window, f64 xpos, f64 ypos);
 
 void mouse_button_callback(GLFWwindow* window, i32 button, i32 action, i32 mods);

@@ -53,6 +53,8 @@
         "wldc_def.h": "c",
         "wldc_mem.h": "c",
         "string.h": "c",
-        "mouse.h": "c"
+        "mouse.h": "c",
+        "vertex_array.h": "c",
+        "glad.h": "c"
     },
 }

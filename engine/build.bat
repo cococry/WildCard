@@ -7,7 +7,6 @@ for /R %%f in (*.c) do (
 )
 
 set assemblyName=Engine
-set vendorFiles= vendor/Glad/src/glad.c vendor/stb_image/stb_image.c
 set includeDir= -Isrc -Isrc/wildcard -Ivendor/Glad/include -Ivendor/GLFW/include -Ivendor/stb_image
 set compilerFlags=-g -shared -Wvarargs -Wall -Werror -o ../bin/%assemblyName%.dll
 set linkingFlags=-lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lodbc32 -lopengl32 -Lvendor/GLFW/lib -lglfw3 -lmsvcrtd.lib

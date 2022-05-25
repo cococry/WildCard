@@ -59,7 +59,7 @@ void* wldc_set_mem(void* dst, i32 value, u64 size) {
     return memset(dst, value, size);
 }
 char* get_mem_stats_str() {
-    char buff[2560];
+    char buff[16000];
 
     const u64 gb = 1024 * 1024 * 1024;
     const u64 mb = 1024 * 1024;
@@ -84,7 +84,7 @@ char* get_mem_stats_str() {
             size = (float)s_stats.categoriesed_allocations[i];
         }
 
-        i32 str_length = snprintf(buff + offset, 16000, "  %s:\t\t%.2f%s\n", mem_type_str[i], size, byteLabel);
+        i32 str_length = snprintf(buff + offset, 16000, "\n%s:   %.2f%s\n", mem_type_str[i], size, byteLabel);
         offset += str_length;
     }
 
