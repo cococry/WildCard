@@ -26,3 +26,5 @@ WLDC_API void window_delete(wldc_window* window);
 WLDC_API void window_update(wldc_window* window);
 
 WLDC_API bool8 window_is_open(wldc_window* window);
+
+void viewport_resize_callback(GLFWwindow* window, int width, int height);

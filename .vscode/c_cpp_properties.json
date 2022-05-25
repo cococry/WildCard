@@ -6,7 +6,8 @@
                 "${workspaceFolder}/engine/src/**",
                 "${workspaceFolder}/engine/vendor/Glad/include/**",
                 "${workspaceFolder}/engine/vendor/GLFW/include/**",
-                "${workspaceFolder}/engine/vendor/stb_image/**"
+                "${workspaceFolder}/engine/vendor/stb_image/**",
+                "${workspaceFolder}/engine/vendor/cglm/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -25,8 +26,8 @@
             "includePath": [
                 "${workspaceFolder}/engine/src/**",
                 "${workspaceFolder}/engine/vendor/Glad/include/**",
-                "${workspaceFolder}/engine/vendor/GLFW/include/**",
-                "${workspaceFolder}/engine/vendor/stb_image/**"
+                "${workspaceFolder}/engine/vendor/stb_image/**",
+                "${workspaceFolder}/engine/vendor/cglm/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -45,7 +46,8 @@
                 "${workspaceFolder}/engine/src/**",
                 "${workspaceFolder}/engine/vendor/Glad/include/**",
                 "${workspaceFolder}/engine/vendor/GLFW/include/**",
-                "${workspaceFolder}/engine/vendor/stb_image/**"
+                "${workspaceFolder}/engine/vendor/stb_image/**",
+                "${workspaceFolder}/engine/vendor/cglm/**"
             ],
             "defines": [
                 "_DEBUG",

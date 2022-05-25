@@ -55,6 +55,7 @@
         "string.h": "c",
         "mouse.h": "c",
         "vertex_array.h": "c",
-        "glad.h": "c"
+        "glad.h": "c",
+        "texture.h": "c"
     },
 }

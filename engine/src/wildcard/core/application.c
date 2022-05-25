@@ -4,6 +4,7 @@
 #include "windowing.h"
 #include "io/keyboard.h"
 #include "io/mouse.h"
+#include "rendering/rendering_util.h"
 
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
@@ -31,6 +32,7 @@ void app_init(application_props* props) {
     s_state.last_frame_time = 0.0;
     s_state.delta_time = 0.0f;
     s_state.window = window_create(s_state.props->width, s_state.props->height, s_state.props->title);
+    rendering_init();
 
     s_state.props->app_init_pfn();
 }

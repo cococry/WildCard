@@ -2,6 +2,10 @@
 
 #include <glad/glad.h>
 
+void rendering_init() {
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+}
 void resize_viewport(u32 x, u32 y) {
     glViewport(0, 0, x, y);
 }
