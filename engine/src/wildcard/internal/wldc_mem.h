@@ -8,6 +8,7 @@ typedef enum mem_type {
     mem_type_char,
     mem_type_struct,
     mem_type_array,
+    mem_type_vector,
 
     mem_type_max_types
 } mem_type;

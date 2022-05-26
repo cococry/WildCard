@@ -3,7 +3,7 @@
 #include "internal/wldc_mem.h"
 #include "asserts.h"
 #include "rendering/rendering_util.h"
-
+#include "application.h"
 #include "io/keyboard.h"
 #include "io/mouse.h"
 #include "logging.h"
@@ -55,4 +55,10 @@ bool8 window_is_open(wldc_window* window) {
 }
 void viewport_resize_callback(GLFWwindow* window, int width, int height) {
     resize_viewport(width, height);
+
+    if (width <= 0 || height <= 0) {
+        suspend_app();
+    } else {
+        unsuspend_app();
+    }
 }

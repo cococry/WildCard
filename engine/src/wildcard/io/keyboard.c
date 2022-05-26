@@ -1,6 +1,7 @@
 #include "keyboard.h"
 
 #include "internal/wldc_mem.h"
+#include "event_system.h"
 
 struct keyboard_state {
     bool8* keys;
@@ -22,9 +23,15 @@ void keyboard_callback(GLFWwindow* window, i32 key, i32 scancode, i32 action, i3
     if (action != GLFW_RELEASE) {
         if (!s_state.keys[key]) {
             s_state.keys[key] = TRUE;
+            event_context context;
+            context.data.i32[0] = key;
+            dispatch_event(event_code_key_pressed, 0, context);
         }
     } else {
         s_state.keys[key] = FALSE;
+        event_context context;
+        context.data.i32[0] = key;
+        dispatch_event(event_code_key_released, 0, context);
     }
     s_state.keys_changed[key] = action != GLFW_REPEAT;
 }
